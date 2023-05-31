@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  background: linear-gradient(135deg, rgb(210, 80, 80), rgb(74, 74, 229));
+}
+.to-do {
+  width: 600px;
+  background-color: rgba(34, 32, 32, 0.328);
+  margin: 70px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 15px;
+}
+.to-do h2 {
+  text-align: center;
+  color: rgb(244, 110, 7);
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: aliceblue;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  border-radius: 30px;
+}
+input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  height: 45px;
+  font-size: 16px;
+}
+button {
+  outline: none;
+  border: none;
+  background: rgb(13, 15, 15);
+  border-radius: 40px;
+  width: 100px;
+  cursor: pointer;
+  color: white;
+  padding: 16px 20px;
+}
+ul li {
+  list-style: none;
+  padding: 16px 18px;
+  font-size: 17px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-left: 30px;
+  margin: 10px;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-image: url(unchecked.png);
+  background-position: center;
+  background-size: cover;
+  left: 0px;
+  top: 15px;
+}
+ul li.checked {
+  color: rgb(8, 8, 8);
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(checked.png);
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  color: rgb(228, 96, 1);
+  text-align: center;
+  font-size: 23px;
+  line-height: 40px;
+  top: 5px;
+}
+ul li span:hover {
+  background: rgba(146, 142, 128, 0.177);
+  border-radius: 30px;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+}
+
+@media (max-width: 477px) {
+  .to-do {
+    width: 100%;
+    margin-right: 50px;
+    padding-right: 40px;
+    align-items: center;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  ul li {
+    padding-right: 40px;
+  }
+  ul li::before {
+    left: 0;
+  }
+}
